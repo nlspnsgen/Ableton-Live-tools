@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 20XX Daniel Bayley
+Copyright (c) 2015 Daniel Bayley
 <daniel.bayley@me.com>
 [github.com/danielbayley](http://github.com/danielbayley)
 

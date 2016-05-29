@@ -17,11 +17,14 @@ They are easy to use, simply open a `.workflow` file and choose the option to in
 
 Note that due to security measures on OS X, permission must first be granted to Applications before they can be manipulated from scripts and services.
 
-Open System Preferences and navigate to `Accessibility` under `Security & Privacy`. Click on the padlock icon and enter your admin password to access the list. Make sure Live is listed and enabled (you can just drag in `Live.app` from Finder if it isn't on the list). You might also want to grant access to System Events and Automator here. This only needs to be done once.
-
+Open System Preferences and navigate to `Accessibility` under `Security & Privacy`. Click on the padlock icon and enter your admin password to access the list. Make sure Live is listed and enabled (you can just drag in `Live.app` from Finder if it isn't on the list). You might also want to grant access to System Events and Automator here. This only needs to be done once. 
 #<div align="center">
 ![](https://cloud.githubusercontent.com/assets/7797479/6142880/28871e60-b1b7-11e4-917a-eb7c19f2d7c3.png)
 </div>
+
+Important: If you are using live in any other language than english, you need to go into /Users/YOURUSERNAME/Library/Services and open the .workflow files in Automator to manually translate the menu items in the apple scripts into your language. For example the "Save Live Set as XML" translated to german would now include: 	
+`tell application "System Events" to tell process "Live" to click menu item "Live-Set Sichern" of menu 1 of menu bar item "Datei" of menu bar 1`
+
 
 ###Git integration
 `Save Live Set as XML.workflow` will automatically uncompress `.als` files in the current project so that they play nice with Git, since a Live set is actually [just gzipped XML](http://crooked-hideout.blogspot.co.uk/2012/01/ableton-live-set-is-gzipped-xml-ruby.html).

@@ -22,10 +22,6 @@ Open System Preferences and navigate to `Accessibility` under `Security & Privac
 ![](https://cloud.githubusercontent.com/assets/7797479/6142880/28871e60-b1b7-11e4-917a-eb7c19f2d7c3.png)
 </div>
 
-Important: If you are using live in any other language than english, you need to go into /Users/YOURUSERNAME/Library/Services and open the .workflow files in Automator to manually translate the menu items in the apple scripts into your language. For example the "Save Live Set as XML" translated to german would now include: 	
-`tell application "System Events" to tell process "Live" to click menu item "Live-Set Sichern" of menu 1 of menu bar item "Datei" of menu bar 1`
-
-
 ###Git integration
 `Save Live Set as XML.workflow` will automatically uncompress `.als` files in the current project so that they play nice with Git, since a Live set is actually [just gzipped XML](http://crooked-hideout.blogspot.co.uk/2012/01/ableton-live-set-is-gzipped-xml-ruby.html).
 

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>409</string>
+	<string>409.2</string>
 	<key>AMApplicationVersion</key>
 	<string>2.5</string>
 	<key>AMDocumentVersion</key>
@@ -45,13 +45,13 @@
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/Users/Dan/Library/Automator/Run AppleScript.action</string>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>Run AppleScript</string>
+				<string>AppleScript ausführen</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>try	tell application "System Events" to tell process "Live" to click menu item "Export Audio/Video..." of menu 1 of menu bar item "File" of menu bar 1on error	tell application "System Preferences"				reveal anchor "Privacy_Accessibility" of pane id "com.apple.preference.security"		activate	end tell	beepend try</string>
+					<string>try	tell application "System Events" to tell process "Live" to click menu item 15 of menu 1 of menu bar item "Datei" of menu bar 1on error error_message number error_number	display alert ("There was a problem. Have you granted Live permission to use Scripts?") ¬		message error_message ¬		&amp; (" Error number ") &amp; error_number &amp; "."	tell application "System Preferences"				reveal anchor "Privacy_Accessibility" of pane id "com.apple.preference.security"		activate	end tell	beepend try</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -73,7 +73,7 @@
 				<string>F48EE947-D252-4944-BA4B-D3EA6A7FB4D8</string>
 				<key>Keywords</key>
 				<array>
-					<string>Run</string>
+					<string>Ausführen</string>
 				</array>
 				<key>OutputUUID</key>
 				<string>DB13F774-3361-4F2C-AA49-6C9A677FDAD1</string>
@@ -88,13 +88,10 @@
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string>use scripting additions
-#use script ""
-
-on run {input}
-
-	#
-
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
 	return input
 end run</string>
 						<key>name</key>
@@ -110,9 +107,9 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>649.000000:316.000000</string>
+				<string>309.000000:316.000000</string>
 				<key>nibPath</key>
-				<string>/Users/Dan/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -160,9 +157,9 @@ end run</string>
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/Users/Dan/Library/Automator/Run Shell Script.action</string>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
 				<key>ActionName</key>
-				<string>Run Shell Script</string>
+				<string>Shell-Skript ausführen</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
@@ -224,9 +221,9 @@ exit 0</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
-					<string>Script</string>
-					<string>Command</string>
-					<string>Run</string>
+					<string>Skript</string>
+					<string>Befehl</string>
+					<string>Ausführen</string>
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
@@ -268,7 +265,7 @@ exit 0</string>
 					<key>2</key>
 					<dict>
 						<key>default value</key>
-						<true/>
+						<false/>
 						<key>name</key>
 						<string>CheckedForUserDefaultShell</string>
 						<key>required</key>
@@ -294,7 +291,7 @@ exit 0</string>
 					<key>4</key>
 					<dict>
 						<key>default value</key>
-						<string>/bin/bash</string>
+						<string>/bin/sh</string>
 						<key>name</key>
 						<string>shell</string>
 						<key>required</key>
@@ -308,9 +305,9 @@ exit 0</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>649.000000:891.000000</string>
+				<string>309.000000:499.000000</string>
 				<key>nibPath</key>
-				<string>/Users/Dan/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/German.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -318,7 +315,7 @@ exit 0</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>8521B7A4-109F-40AE-9538-5B5782D01855</key>
+		<key>C82013E1-6BF6-446F-9A25-A550248C5FF1</key>
 		<dict>
 			<key>from</key>
 			<string>AAD80977-F543-4777-B43E-E6FD9F1F8CDA - AAD80977-F543-4777-B43E-E6FD9F1F8CDA</string>
